@@ -55,6 +55,13 @@ color: red;
     font-weight: bold;
     padding: 10px 20px;
 }
- .controls {
-     
- }
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
