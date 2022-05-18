@@ -1,14 +1,12 @@
 const startButton = document.querySelector(".start-btn")
 const nextButton = document.querySelector(".next-btn")
 const prevButton = document.querySelector(".prev-btn")
-
-const buttonOneOption = document.querySelector(".option1")
-const buttonTwoOption = document.querySelector(".option2")
-const buttonThreeOption = document.querySelector(".option3")
-const buttonFourOption = document.querySelector(".option4")
+const questionIndex = 0;
 
 
+// questions for quiz
 const questions = [
+    
     {
         question: 'Arrays in Javascript can be used to store:',
         options: ['Booleans','Numbers and Strings','Other Arrays','All of the above',],
@@ -46,8 +44,19 @@ function selectOption() {
 nextButton.addEventListener('click', nextQuestion)
 
 function nextQuestion() {
-    questions
+    questionIndex ++;
+    if (questionIndex >= questionObj.questions.length){
+        endGame();
+    } else {
+        showQuestions(questionIndex);
+    }
+ 
+    return;
+}
 
+function showQuestions() {
+    titleTag.textContent = questionObj.quesions[currentQuestions];
+    createAnswers(currentQuestions);
 }
 
 
