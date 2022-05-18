@@ -5,7 +5,7 @@ const questionIndex = 0;
 
 
 // questions for quiz
-const questions = [
+const questionsArr = [
     
     {
         question: 'Arrays in Javascript can be used to store:',
@@ -32,7 +32,9 @@ const questions = [
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
-    nextQuestion()
+    gameOver = false;
+    questionIndex = 0;
+    startButton.style.display = 'none'
 }
 
 
@@ -44,20 +46,28 @@ function selectOption() {
 nextButton.addEventListener('click', nextQuestion)
 
 function nextQuestion() {
-    questionIndex ++;
-    if (questionIndex >= questionObj.questions.length){
+    questionArr ++;
+    if (questionArr >= questionsArr.options.length){
         endGame();
     } else {
-        showQuestions(questionIndex);
+        showQuestions(questionArr);
     }
  
     return;
 }
 
-function showQuestions() {
-    titleTag.textContent = questionObj.quesions[currentQuestions];
-    createAnswers(currentQuestions);
+function endGame() {
+    gameEnded = true;
 }
+
+function showQuestions(currentQuestions) {
+    titleTag.textContent = questionsArr.options[currentQuestions];
+    createAnswer(currentQuestions);
+    return;
+}
+    
+
+
 
 
 
