@@ -1,21 +1,30 @@
 const startButton = document.querySelector("start-btn")
 const nextButton = document.querySelector("next-btn")
-const questionContainerElement = document.querySelector("question-container")
-const questionElement = document.querySelector("question")
 
+const questions = [
+    {
+        question: ''
+        answers: 
+    }
+]
 
+startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
-
+nextQuestion()
 }
+
+
 
 function selectOption () {
 
 }
 
+nextButton.addEventListener('click', nextQuestion)
+
 function nextQuestion() {
 
-    
+
 }
 
 
