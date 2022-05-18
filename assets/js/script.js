@@ -33,7 +33,6 @@ startButton.addEventListener('click', startQuiz)
 
 // starts quiz
 function startQuiz() {
-    startButton 
     gameOver = false;
     startButton.style.display = 'none';
     showQuestions(questionsArr);
