@@ -1,41 +1,33 @@
-const startButton = document.querySelector("start-btn")
-const nextButton = document.querySelector("next-btn")
-const prevButton = document.querySelector("prev-btn")
+const startButton = document.querySelector(".start-btn")
+const nextButton = document.querySelector(".next-btn")
+const prevButton = document.querySelector(".prev-btn")
+
+const buttonOneOption = document.querySelector(".option1")
+const buttonTwoOption = document.querySelector(".option2")
+const buttonThreeOption = document.querySelector(".option3")
+const buttonFourOption = document.querySelector(".option4")
 
 
 const questions = [
     {
         question: 'Arrays in Javascript can be used to store:',
-        option1: 'Booleans',
-        option2: 'Numbers and Strings',
-        option3: 'Other Arrays',
-        option4: 'All of the above',
-        rightAnswer: 'All of the above',
+        options: ['Booleans','Numbers and Strings','Other Arrays','All of the above',],
+        answer: 'All of the above',
     },
     {
         question: 'Commonly used Data types DO NOT include?',
-        option1: 'Strings',
-        option2: 'Boolean',
-        option3: 'Numbers',
-        option4: 'Alerts',
-        rightAnswer: 'Boolean',
+        options: ['Strings','Boolean','Numbers','Alerts',],
+        answer: 'Boolean',
     },
     {
         question: 'String values must be enclosed within _____ when being assigned to variables',
-        option1: 'Commas',
-        option2: 'Curly Brackets',
-        option3: 'Quotes',
-        option4: 'Parenthesis',
-        rightAnswer: 'Curly Brackets',
+        options: ['Commas','Curly Brackets','Quotes','Parenthesis',],
+        answer: 'Curly Brackets',
     },
     {
         question: 'A very useful tool used during development and debugging for prinitng content to the debugger',
-    option1: 'Javascript', 
-    option2: 'Terminal/Bash',
-    option3: 'For loops', 
-    option4: 'Console.log', 
-    rightAnswer: 'For Loops', 
-    
+        options: ['Javascript','Terminal/Bash','For loops','Console.log',],
+        answer: 'For Loops',
     },
 ]
 
